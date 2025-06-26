@@ -1,4 +1,5 @@
-public class Triangle{
+import java.util.*; 
+ public class Triangle{
     public static void solid_triangle( int n) {
         for (int i = 1; i<=n; i++) {
             for (int j = 1 ; j<=n-i; j++) {
@@ -11,7 +12,9 @@ public class Triangle{
         }
     }
     public static void main (String args[]) {
-        
-        solidtriangle(5);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Rows");
+        int n = sc.nextInt();
+        solid_triangle(n);
     }
-}
+ }
