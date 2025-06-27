@@ -2,9 +2,7 @@ import java.util.*;
  public class Palindrome {
     public static void palindromic_triangle(int n) {
         for (int i = 1; i <= n; i++) {
-            if (i > 5){
-                break;
-            }
+            
             //  spaces  
             for (int j = 1; j <= n - i; j++) {
                 System.out.print("  "); 
