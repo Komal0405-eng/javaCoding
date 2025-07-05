@@ -1,21 +1,24 @@
-
 import java.util.*;
+
 public class HollowDiamond {
 
-    public static void printhollowdiamond(int n) {
+    public static void printHollowDiamond(int n) {
         int mid = (n + 1) / 2;
 
-        // Upper Half 
+        // Upper Half
         for (int i = 1; i <= mid; i++) {
             // spaces
             for (int s = 1; s <= mid - i; s++) {
-                System.out.print(" ");
+                System.out.print("  ");
             }
 
             if (i == mid) {
-                // Middle 
+                // Middle row
                 for (int j = 1; j <= n; j++) {
-                    System.out.print(j + " ");
+                    System.out.print(j + "  ");
+                }
+                for (int j = n - 1; j >= 1; j--) {
+                    System.out.print(j + "  ");
                 }
             } else if (i == 1) {
                 System.out.print("1");
@@ -23,10 +26,11 @@ public class HollowDiamond {
                 System.out.print("1");
                 int innerSpaces = 2 * i - 3;
                 for (int s = 1; s <= innerSpaces; s++) {
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
                 System.out.print(i);
             }
+
             System.out.println();
         }
 
@@ -34,7 +38,7 @@ public class HollowDiamond {
         for (int i = mid - 1; i >= 1; i--) {
             // spaces
             for (int s = 1; s <= mid - i; s++) {
-                System.out.print(" ");
+                System.out.print("  ");
             }
 
             if (i == 1) {
@@ -43,10 +47,11 @@ public class HollowDiamond {
                 System.out.print("1");
                 int innerSpaces = 2 * i - 3;
                 for (int s = 1; s <= innerSpaces; s++) {
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
                 System.out.print(i);
             }
+
             System.out.println();
         }
     }
@@ -57,10 +62,10 @@ public class HollowDiamond {
         System.out.print("Enter an odd number: ");
         int n = sc.nextInt();
 
-        if (n % 2 == 0) {
-            System.out.println("Please enter an odd number.");
+        if (n % 2 == 0 || n < 1) {
+            System.out.println("Please enter odd number.");
         } else {
-            printhollowdiamond(n);
+            printHollowDiamond(n);
         }
     }
 }
