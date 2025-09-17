@@ -10,12 +10,12 @@ public class Fibonacci {
         return fn;
     }
     public static void main(String args[]){
-        int n =15;
-        System.out.println(fib(24));
+         
+        System.out.println(fib(5));
         System.out.println(fib(25));
         System.out.println(fib(26));
         System.out.println(fib(27));
         System.out.println(fib(27));
-
+       
     }
 }
